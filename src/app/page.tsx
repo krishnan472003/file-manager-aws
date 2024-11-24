@@ -5,10 +5,10 @@ import AWS from "aws-sdk"
 
 export default function Home() {
 
-  const AWS_BUCKET_NAME = process.env.NEXT_PUBLIC_AWS_BUCKET_NAME;
+  const AWS_BUCKET_NAME = "my-app-image-ca-proj";
   const AWS_ACCESSKEYID = process.env.NEXT_PUBLIC_AWS_ACCESSKEYID;
   const AWS_SECRETACCESSKEY = process.env.NEXT_PUBLIC_AWS_SECRETACCESSKEY
-  const AWS_REGION = process.env.NEXT_PUBLIC_AWS_REGION;
+  const AWS_REGION = "ap-southeast-1";
 
   const [file, setFile] = useState<File | null>(null);
   const [isUploading, setIsUploading] = useState(false);
