@@ -37,7 +37,7 @@ export default function Home() {
 
     const params = {
       Bucket: AWS_BUCKET_NAME,
-      Key: file.name, // S3 object key (file name)
+      Key: file.name, // S3 object key
       Body: file, // File content
       ContentType: file.type, // Content type of the file (optional)
     };
@@ -66,7 +66,7 @@ export default function Home() {
           const imageUrl = s3.getSignedUrl("getObject", {
             Bucket: AWS_BUCKET_NAME,
             Key: item.Key!,
-            Expires: 60, // URL expires in 60 seconds
+            Expires: 90, // URL expires in 60 seconds
           });
           return imageUrl;
         }) || [];
